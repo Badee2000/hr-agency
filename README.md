@@ -8,6 +8,7 @@ A web-based platform built with **Django**, designed for HR agencies to manage o
 
 ✅ **Django Admin Panel**  
 - Manage users, companies, and candidates through a robust admin interface.
+- The admin panel is styled and improved using **Jazzmin**, offering a modern, user-friendly UI.
 - Permissions control who can access different data and features.
 
 ---
@@ -73,7 +74,7 @@ This approach allows:
 - OpenRouter API for AI integration
 - Python 3.10+
 - SQLite (default, can switch to PostgreSQL)
-
+- Jazzmin (Django admin styling)
 ---
 
 ## ⚙️ Getting Started
