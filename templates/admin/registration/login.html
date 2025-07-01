@@ -1,0 +1,82 @@
+{% extends 'admin/registration/login.html' %}
+{% load static i18n %}
+
+{% block content %}
+<form action="{{ app_path }}" method="post" id="login-form">{% csrf_token %}
+    <div class="card-body login-card-body">
+        <p class="login-box-msg">{% trans
+            "Welcome to the MyChat Admin Panelssss"%}</p>
+
+        <div class="form-group">
+            <label for="{{ form.username.id_for_label }}">
+                {% translate "Username or Email" %}</label>
+            {{ form.username }}
+            {% if form.username.errors %}
+            <span class="error invalid-feedback">
+                {{ form.username.errors.as_text}}</span>
+            {% endif %}
+        </div>
+
+        <div class="form-group">
+            <label for="{{ form.password.id_for_label }}">
+                {% translate "Password" %}</label>
+            {{ form.password }}
+            {% if form.password.errors %}
+            <span class="error invalid-feedback">
+                {{ form.password.errors.as_text}}</span>
+            {% endif %}
+        </div>
+
+        <div class="row">
+            <div class="col-8">
+                <div class="icheck-primary">
+                    {{ form.remember_me }}
+                    <label for="{{ form.remember_me.id_for_label }}">
+                        {% translate "Remember Me" %}
+                    </label>
+                </div>
+            </div>
+            <div class="col-4">
+                <button type="submit" class="btn btn-primary btn-block">
+                    {% trans "Sign In" %}</button>
+            </div>
+        </div>
+    </div>
+    {% if form.non_field_errors or form.this_is_the_login_form.errors %}
+    <div class="card-footer border-0 bg-transparent text-center">
+        {% for error in form.non_field_errors %}
+        <p class="login-box-msg text-danger">{{ error }}</p>
+        {% endfor %}
+        {% for error in form.this_is_the_login_form.errors %}
+        <p class="login-box-msg text-danger">{{ error }}</p>
+        {% endfor %}
+    </div>
+    {% endif %}
+</form>
+{% endblock %}
+
+{% block extra_js %}
+{{ block.super }}
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var usernameInput = document.getElementById('{{ form.username.id_for_label }}');
+        var passwordInput = document.getElementById('{{ form.password.id_for_label }}');
+
+        // Ensure form-control class for styling, if not already present
+        if (usernameInput && !usernameInput.classList.contains('form-control')) {
+            usernameInput.classList.add('form-control');
+        }
+        if (passwordInput && !passwordInput.classList.contains('form-control')) {
+            passwordInput.classList.add('form-control');
+        }
+        
+        // Force the desired placeholder text, overriding any existing one
+        if (usernameInput) {
+            usernameInput.placeholder = '{% translate "Username or Email" %}';
+        }
+        if (passwordInput) {
+            passwordInput.placeholder = '{% translate "Password" %}'; 
+        }
+    });
+</script>
+{% endblock %}

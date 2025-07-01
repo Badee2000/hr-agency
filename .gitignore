@@ -1,0 +1,70 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Django
+*.sqlite3
+db.sqlite3
+*.log
+
+# Environment variables
+.env
+.env.*
+
+# Virtualenv
+venv/
+env/
+ENV/
+.venv/
+.ENV/
+
+# IDEs and editors
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# pytest / coverage
+htmlcov/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.pytest_cache/
+
+# Migrations (OPTIONAL — generally keep these!)
+# **Comment this out if you DO want migrations tracked**
+# **Recommended: KEEP migrations under version control**
+# */migrations/*.py
+# */migrations/*.pyc
+
+# Static/media (OPTIONAL — depends on your project)
+# Usually don’t ignore collected staticfiles in dev
+# unless stored locally for deployment
+# staticfiles/
+# media/
+
+# MyPy
+.mypy_cache/
+
+# VS Code virtual environment folder (if used)
+.vscode/
+
+# Pycharm
+*.iml
+.idea/
