@@ -10,7 +10,7 @@ A web-based platform built with **Django**, designed for HR agencies to manage o
 - Manage users, companies, and candidates through a robust admin interface.
 - The admin panel is styled and improved using **Jazzmin**, offering a modern, user-friendly UI.
 - Permissions control who can access different data and features.
-
+![Admin Panel Screenshot](screenshots/Admin%20Panel.png)
 ---
 
 ✅ **Real-Time Chat System (Long Polling)**  
@@ -30,6 +30,7 @@ A web-based platform built with **Django**, designed for HR agencies to manage o
   - Helping HR staff answer questions.
   - Automating candidate conversations.
   - Providing instant insights for companies.
+![AI Chat Screenshot](screenshots/AI%20Chat.png)
 
 ---
 
