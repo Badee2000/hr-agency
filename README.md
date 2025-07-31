@@ -2,6 +2,7 @@
 
 A web-based platform built with **Django**, designed for HR agencies to manage operations, user roles, and intelligent communication in one place.
 
+# Note: The code is in development enviroment stage and has not been updated for production.
 ---
 
 ## ✨ Features
